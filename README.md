@@ -121,4 +121,47 @@ limit 10;
  ```
  ## Visualise top 10 countries with the most number of deaths due to Malaria in a year
  ![image](https://user-images.githubusercontent.com/45635012/190988081-cc0d907a-a6f0-4c84-88d3-70b081511261.png)
+ 
+ ## Analysis of deaths caused by AIDS in the world for year 2019
+ ```sql
+ select country,hiv
+from number_of_deaths
+where year_of_study = 2019
+order by hiv desc;
+```
+```sql
+             country              |  hiv
+----------------------------------+--------
+ South Africa                     | 143851
+ Nigeria                          |  82270
+ Mozambique                       |  66304
+ Kenya                            |  51135
+ India                            |  46298
+ China                            |  31746
+ Tanzania                         |  27125
+ Ethiopia                         |  26591
+ Cameroon                         |  23172
+ Zambia                           |  22540
+ Uganda                           |  20762
+ Zimbabwe                         |  20722
+ Russia                           |  18682
+ Thailand                         |  17215
+ Angola                           |  16802
+ Brazil                           |  15561
+ Ghana                            |  14621
+ Malawi                           |  14227
+ Cote d'Ivoire                    |  13638
+ Lesotho                          |  10793
+ Democratic Republic of Congo     |  10238
+ United States                    |   7053
+ Ukraine                          |   6643
+ Vietnam                          |   6399
+ Haiti                            |   5908
+ Botswana                         |   5612
+ Indonesia                        |   5603
+-- More  --
+```
+## Visualize a world map with deaths caused by AIDS as a heatmap 
+![image](https://user-images.githubusercontent.com/45635012/190989766-a2c24330-fe74-4979-bd54-a7071de899dd.png)
+
 
