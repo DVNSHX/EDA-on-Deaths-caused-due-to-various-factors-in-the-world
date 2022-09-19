@@ -3,16 +3,8 @@ exploratory data analysis on deaths caused due to various factors in the world f
 
 #### Table of Contents
   * [Setup DB](#setup-db)
-  * [Shape of Data](#shape-of-data)
   * [Viewing date](#viewing-data)
-  * [Distinct values](#distinct-values)
-  * [Order by](#order-by)
-  * [Case](#case)
-  * [Data Aggregation](#data-aggregation)
-  * [Pattern Match](#pattern-match)
-  * [Group By](#group-by)
-  * [Window Functions](#window-functions)
-  * [Join](#join)
+  * [Queries](#queries)
 
 *The data was collected from https://ourworldindata.org/causes-of-death*
 
@@ -60,7 +52,7 @@ CREATE TABLE number_of_deaths
 );
 ```
 
-## Shape of Data
+## Viewing Data
 ```sql
 select * from number_of_deaths limit 10;
 ```
@@ -79,5 +71,4 @@ country              | year_of_study | meningitis | alzheimers_and_dementias | p
  Australia           |          1990 |         99 |                     3669 |        880 |                     77 |       0 |      295 |                    380 |                 19 | 379 |               458 |           99 |  51230 |                   1823 |                872 |                  270 |     2342 |               16 |                 38 |                      40 |     31401 |                      2 |     2198 |             1712 |         47 |                         47 |          2739 |                        6966 |           1394 |               3944 |                     147 |               6
  ```
 
-
-
+## Queries
