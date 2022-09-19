@@ -78,7 +78,7 @@ country              | year_of_study | meningitis | alzheimers_and_dementias | p
 select country, year_of_study, parkinsons from number_of_deaths limit 10;
 ```
 ```
-country       | year_of_study | parkinsons
+country             | year_of_study | parkinsons
 ---------------------+---------------+------------
  Afghanistan         |          1990 |        371
  Albania             |          1990 |         93
