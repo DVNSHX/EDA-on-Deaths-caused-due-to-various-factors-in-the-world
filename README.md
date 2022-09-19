@@ -121,6 +121,7 @@ limit 10;
  ```
  ## Visualise top 10 countries with the most number of deaths due to Malaria in a year
  ![image](https://user-images.githubusercontent.com/45635012/190988081-cc0d907a-a6f0-4c84-88d3-70b081511261.png)
+ *Insight: Nigeria, a small country resulted in 280604 people dead in a year due to malaria. Furthermore, many of the countries in the top 10 are African countries indicating a need for malaria intervention in Africa*
  
  ## Analysis of deaths caused by AIDS in the world for year 2019
  ```sql
@@ -163,5 +164,6 @@ order by hiv desc;
 ```
 ## Visualize a world map with deaths caused by AIDS as a heatmap 
 ![image](https://user-images.githubusercontent.com/45635012/190989766-a2c24330-fe74-4979-bd54-a7071de899dd.png)
+*Insight: AIDS is rampantly prevalent in South Africa and is a major risk for the life of inhabitants, further diagnosis is needed to identify the root cause of this proliferation*
 
 
