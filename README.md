@@ -9,6 +9,7 @@ exploratory data analysis on deaths caused due to various factors in the world f
 *The data was collected from https://ourworldindata.org/causes-of-death*
 
 ## Setup DB
+*The data has been pre-cleaned in excel for missing values; removal of coloumns with missing value is strategy employed as the causes were not that relevant to the EDA. Furthermore, clumped regions were removed and only individual countries were left in the csv*
 ```sql
 copy number_of_deaths from 'file_path' delimiter ',' csv header;
 ```
@@ -72,3 +73,71 @@ country              | year_of_study | meningitis | alzheimers_and_dementias | p
  ```
 
 ## Queries
+### Extract Data for Deaths causes by Parkinsons Disease
+```sql
+select country, year_of_study, parkinsons from number_of_deaths;
+```
+```
+             country              | year_of_study | parkinsons
+----------------------------------+---------------+------------
+ Afghanistan                      |          1990 |        371
+ Albania                          |          1990 |         93
+ Algeria                          |          1990 |        439
+ American Samoa                   |          1990 |          1
+ Andorra                          |          1990 |          2
+ Angola                           |          1990 |         86
+ Antigua and Barbuda              |          1990 |          3
+ Argentina                        |          1990 |       1494
+ Armenia                          |          1990 |         76
+ Australia                        |          1990 |        880
+ Austria                          |          1990 |        583
+ Azerbaijan                       |          1990 |        148
+ Bahamas                          |          1990 |          6
+ Bahrain                          |          1990 |          6
+ Bangladesh                       |          1990 |       1851
+ Barbados                         |          1990 |         14
+ Belarus                          |          1990 |        391
+ Belgium                          |          1990 |        726
+ Belize                           |          1990 |          3
+ Benin                            |          1990 |         85
+ Bermuda                          |          1990 |          5
+ Bhutan                           |          1990 |          6
+ Bolivia                          |          1990 |        153
+ Bosnia and Herzegovina           |          1990 |        180
+ Botswana                         |          1990 |         13
+ Brazil                           |          1990 |       2891
+ Brunei                           |          1990 |          4
+ Bulgaria                         |          1990 |        606
+ Burkina Faso                     |          1990 |        151
+ Burundi                          |          1990 |         79
+ Cambodia                         |          1990 |        135
+ Cameroon                         |          1990 |        176
+ Canada                           |          1990 |       1545
+ Cape Verde                       |          1990 |          8
+ Chad                             |          1990 |        105
+ Chile                            |          1990 |        438
+ China                            |          1990 |      31920
+ Colombia                         |          1990 |        510
+ Comoros                          |          1990 |          8
+ Congo                            |          1990 |         36
+ Cook Islands                     |          1990 |          1
+ Costa Rica                       |          1990 |         64
+ Cote d'Ivoire                    |          1990 |        123
+ Croatia                          |          1990 |        287
+ Cuba                             |          1990 |        377
+ Cyprus                           |          1990 |         54
+ Czechia                          |          1990 |        609
+ Democratic Republic of Congo     |          1990 |        379
+ Denmark                          |          1990 |        330
+ Djibouti                         |          1990 |          3
+ Dominica                         |          1990 |          4
+ Dominican Republic               |          1990 |        114
+ Ecuador                          |          1990 |        168
+ Egypt                            |          1990 |       1045
+ El Salvador                      |          1990 |        101
+ England                          |          1990 |       4098
+ Equatorial Guinea                |          1990 |          5
+ Eritrea                          |          1990 |         18
+ Estonia                          |          1990 |         84
+ Eswatini                         |          1990 |          7
+ ```
