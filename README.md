@@ -17,3 +17,6 @@ exploratory data analysis on deaths caused due to various factors in the world f
 *The data was collected from https://ourworldindata.org/causes-of-death*
 
 ## Setup DB
+```sql
+copy number_of_deaths from 'file_path' delimiter ',' csv header;
+```
