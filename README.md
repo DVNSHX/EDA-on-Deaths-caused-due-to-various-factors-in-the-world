@@ -119,3 +119,6 @@ limit 10;
  Bangladesh                   |       38637
  Niger                        |       36155
  ```
+ ## Visualise top 10 countries with the most number of deaths due to Malaria in a year
+ ![image](https://user-images.githubusercontent.com/45635012/190988081-cc0d907a-a6f0-4c84-88d3-70b081511261.png)
+
