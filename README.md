@@ -94,3 +94,28 @@ country             | year_of_study | parkinsons
  ## Visualise total deaths caused due to parkinsons disease from 1990 to 2019
  ![image](https://user-images.githubusercontent.com/45635012/190979564-1d40ca32-f4ff-49f6-8eb8-490e0a2b8def.png)
 *Insight: Parkinsons disease has been globally increasing, we can further check the countries where parkinsons has decreases and diagnose how they have controlled it to share the interventions with other countries*
+
+### Top 10 distinct countries with most deaths in a year caused due to Malaria
+```sql
+select
+distinct country,
+MAX(malaria) as malaria_max
+from number_of_deaths
+group by country
+order by malaria_max desc
+limit 10;
+```
+```
+           country            | malaria_max
+------------------------------+-------------
+ Nigeria                      |      280604
+ India                        |      162369
+ Democratic Republic of Congo |      102544
+ Uganda                       |       57993
+ Cote d'Ivoire                |       42573
+ Burkina Faso                 |       41921
+ Tanzania                     |       39868
+ Ethiopia                     |       39036
+ Bangladesh                   |       38637
+ Niger                        |       36155
+ ```
