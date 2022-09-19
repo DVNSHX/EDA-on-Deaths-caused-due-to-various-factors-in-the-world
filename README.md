@@ -213,5 +213,66 @@ on t.year_of_study=n.year_of_study and t.mx=n.hiv;
 ![image](https://user-images.githubusercontent.com/45635012/190996893-97ac06b5-4a3c-42a3-b426-6d97c7fd9122.png)
 *Insight: Although South Africa has the most number of deaths due to HIV in recent years, they have been diminishing since 2007, What this graph tells us is how African countries have been relatively doing well in reducing the deaths which is highly corrleated with the number of cases. We can also see from 1996 to 2006 something went wrong in South Africa resulting in a massive proliferation of cases, this must be diagnosed.*
 
+## Write a Query to compare Number of deaths caused by Alcoholism in China and India
+```sql
+With CTE as (select 
+year_of_study,
+country,
+alcohol_use_disorder
+from number_of_deaths
+where country = 'India'),
+CTE_2 as (select 
+year_of_study,
+country,
+alcohol_use_disorder
+from number_of_deaths
+where country = 'China')
+Select 
+CTE.year_of_study, 
+CTE.country,
+CTE.alcohol_use_disorder as IndiaAlcohol,
+CTE_2.country,
+CTE_2.alcohol_use_disorder as ChinaAlcohol
+from CTE inner join CTE_2
+on CTE.year_of_study = CTE_2.year_of_study
+order by CTE.year_of_study;
+```
+```
+ year_of_study | country | indiaalcohol | country | chinaalcohol
+---------------+---------+--------------+---------+--------------
+          1990 | India   |        12818 | China   |         9377
+          1991 | India   |        13067 | China   |         9282
+          1992 | India   |        13166 | China   |         9243
+          1993 | India   |        13442 | China   |         9287
+          1994 | India   |        13830 | China   |         9583
+          1995 | India   |        13922 | China   |         9732
+          1996 | India   |        14357 | China   |        10016
+          1997 | India   |        15207 | China   |        10244
+          1998 | India   |        15503 | China   |        10820
+          1999 | India   |        15874 | China   |        11452
+          2000 | India   |        16103 | China   |        12527
+          2001 | India   |        16350 | China   |        13981
+          2002 | India   |        16549 | China   |        15761
+          2003 | India   |        16521 | China   |        17825
+          2004 | India   |        16410 | China   |        19906
+          2005 | India   |        16942 | China   |        20915
+          2006 | India   |        17759 | China   |        21167
+          2007 | India   |        18619 | China   |        21274
+          2008 | India   |        19487 | China   |        21408
+          2009 | India   |        19473 | China   |        21192
+          2010 | India   |        19903 | China   |        21077
+          2011 | India   |        20485 | China   |        20738
+          2012 | India   |        20471 | China   |        20458
+          2013 | India   |        20511 | China   |        20181
+          2014 | India   |        20125 | China   |        20069
+          2015 | India   |        20753 | China   |        19893
+          2016 | India   |        21469 | China   |        19803
+          2017 | India   |        22048 | China   |        19627
+          2018 | India   |        22687 | China   |        19499
+          2019 | India   |        23261 | China   |        19459
+(30 rows)
+```
+#Visualize the Aforementioned 
+![image](https://user-images.githubusercontent.com/45635012/191002827-a745ea03-5a74-49a8-a0f2-94fcf9e17a4c.png)
 
 
