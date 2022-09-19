@@ -91,3 +91,6 @@ country             | year_of_study | parkinsons
  Armenia             |          1990 |         76
  Australia           |          1990 |        880
  ```
+ ## Visualise total deaths caused due to parkinsons disease from 1990 to 2019
+ ![image](https://user-images.githubusercontent.com/45635012/190979564-1d40ca32-f4ff-49f6-8eb8-490e0a2b8def.png)
+*Insight: Parkinsons disease has been globally increasing, we can further check the countries where parkinsons has decreases and diagnose how they have controlled it to share the interventions with other countries*
