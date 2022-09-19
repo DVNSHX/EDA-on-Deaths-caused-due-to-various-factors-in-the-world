@@ -166,4 +166,52 @@ order by hiv desc;
 ![image](https://user-images.githubusercontent.com/45635012/190989766-a2c24330-fe74-4979-bd54-a7071de899dd.png)
 *Insight: AIDS is rampantly prevalent in South Africa and is a major risk for the life of inhabitants, further diagnosis is needed to identify the root cause of this proliferation*
 
+## Maximum number of deaths every year due to HIV since 1990 along with country name
+```sql
+select n.year_of_study,n.country,t.mx
+from (select year_of_study, max(hiv) as mx
+from number_of_deaths
+group by year_of_study) t inner join number_of_deaths n
+on t.year_of_study=n.year_of_study and t.mx=n.hiv;
+```
+```
+ year_of_study |   country    |   mx
+---------------+--------------+--------
+          1990 | Uganda       |  78042
+          1991 | Uganda       |  83383
+          1992 | Uganda       |  87233
+          1993 | Uganda       |  90146
+          1994 | Uganda       |  92000
+          1995 | Uganda       |  93253
+          1996 | Tanzania     | 100572
+          1997 | Kenya        | 108473
+          1998 | Kenya        | 117468
+          1999 | South Africa | 136870
+          2000 | South Africa | 169847
+          2001 | South Africa | 202764
+          2002 | South Africa | 234098
+          2003 | South Africa | 262718
+          2004 | South Africa | 286607
+          2005 | South Africa | 301614
+          2006 | South Africa | 305491
+          2007 | South Africa | 298253
+          2008 | South Africa | 282664
+          2009 | South Africa | 260926
+          2010 | South Africa | 240024
+          2011 | South Africa | 217917
+          2012 | South Africa | 193635
+          2013 | South Africa | 175969
+          2014 | South Africa | 167813
+          2015 | South Africa | 166978
+          2016 | South Africa | 172025
+          2017 | South Africa | 169326
+          2018 | South Africa | 153281
+          2019 | South Africa | 143851
+(30 rows)
+```
+## Visualize the aforementioned as a line chart
+![image](https://user-images.githubusercontent.com/45635012/190996893-97ac06b5-4a3c-42a3-b426-6d97c7fd9122.png)
+*Insight: Although South Africa has the most number of deaths due to HIV in recent years, they have been diminishing since 2007, What this graph tells us is how African countries have been relatively doing well in reducing the deaths which is highly corrleated with the number of cases. We can also see from 1996 to 2006 something went wrong in South Africa resulting in a massive proliferation of cases, this must be diagnosed.*
+
+
 
