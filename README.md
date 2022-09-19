@@ -272,7 +272,7 @@ order by CTE.year_of_study;
           2019 | India   |        23261 | China   |        19459
 (30 rows)
 ```
-#Visualize the Aforementioned 
+## Visualize the Aforementioned 
 ![image](https://user-images.githubusercontent.com/45635012/191002827-a745ea03-5a74-49a8-a0f2-94fcf9e17a4c.png)
 
 
