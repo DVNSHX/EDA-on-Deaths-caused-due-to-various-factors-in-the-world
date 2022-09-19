@@ -14,6 +14,6 @@ exploratory data analysis on deaths caused due to various factors in the world f
   * [Window Functions](#window-functions)
   * [Join](#join)
 
-*The data was collected from https://ourworldindata.org/causes-of-death
+*The data was collected from https://ourworldindata.org/causes-of-death*
 
-##Setup DB
+## Setup DB
