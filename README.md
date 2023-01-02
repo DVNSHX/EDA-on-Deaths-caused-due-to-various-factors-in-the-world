@@ -275,4 +275,50 @@ order by CTE.year_of_study;
 ## Visualize the Aforementioned 
 ![image](https://user-images.githubusercontent.com/45635012/191002827-a745ea03-5a74-49a8-a0f2-94fcf9e17a4c.png)
 
+## Write a Query to get YOY% change in deaths of Malaria victims in India from 1990 to 2019
+```
+SELECT year_of_study,
+       malaria::Numeric,
+       concat(round(((malaria::numeric/((lag(malaria,1) OVER (ORDER BY year_of_study))::Numeric))-1)*100,2),'%') as diff
+FROM number_of_deaths
+WHERE country like 'India';
+```
+```
+ year_of_study | malaria |  diff
+---------------+---------+---------
+          1990 |  162369 | %
+          1991 |  159473 | -1.78%
+          1992 |  151759 | -4.84%
+          1993 |  142187 | -6.31%
+          1994 |  131169 | -7.75%
+          1995 |  123847 | -5.58%
+          1996 |  120014 | -3.09%
+          1997 |  118550 | -1.22%
+          1998 |  108147 | -8.78%
+          1999 |   84608 | -21.77%
+          2000 |   70076 | -17.18%
+          2001 |   73843 | 5.38%
+          2002 |   80138 | 8.52%
+          2003 |   78316 | -2.27%
+          2004 |   77383 | -1.19%
+          2005 |   71265 | -7.91%
+          2006 |   71129 | -0.19%
+          2007 |   68053 | -4.32%
+          2008 |   62028 | -8.85%
+          2009 |   58617 | -5.50%
+          2010 |   60236 | 2.76%
+          2011 |   63142 | 4.82%
+          2012 |   42686 | -32.40%
+          2013 |   32921 | -22.88%
+          2014 |   45334 | 37.71%
+          2015 |   50605 | 11.63%
+          2016 |   34592 | -31.64%
+          2017 |   29355 | -15.14%
+          2018 |   34030 | 15.93%
+          2019 |   33372 | -1.93%
+(30 rows)
+```
+## Visualize the Aforementioned 
+![image](https://user-images.githubusercontent.com/45635012/210217685-7be59492-e04d-465e-9607-5ba7d658061f.png)
+
 
